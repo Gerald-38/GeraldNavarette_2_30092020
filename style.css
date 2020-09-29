@@ -4,10 +4,17 @@
     src: url('fonts/Raleway-VariableFont_wght.ttf');
 }
 
-
-
 body
 {
     font-family:'Raleway', Arial, Helvetica, sans-serif;
 }
+
+#hebergements
+{
+    background-color:#F2F2F2;
+    border: 1px #F2F2F2 solid;
+    border-radius: 1%;
+}
+
+
 
