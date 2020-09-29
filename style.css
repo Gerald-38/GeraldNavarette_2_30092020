@@ -9,11 +9,16 @@ body
     font-family:'Raleway', Arial, Helvetica, sans-serif;
 }
 
-#hebergements
+#populaires
 {
     background-color:#F2F2F2;
     border: 1px #F2F2F2 solid;
-    border-radius: 1%;
+}
+
+.hebergement,.activite
+{
+    border: 1px #F2F2F2 solid;
+    border-radius: 1%; 
 }
 
 
