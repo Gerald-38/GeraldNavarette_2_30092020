@@ -9,7 +9,7 @@ body
     font-family:'Raleway', Arial, Helvetica, sans-serif;
 }
 
-#populaires
+#populaires,footer
 {
     background-color:#F2F2F2;
     border: 1px #F2F2F2 solid;
