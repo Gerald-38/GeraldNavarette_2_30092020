@@ -7,14 +7,143 @@
 body
 {
     font-family:'Raleway', Arial, Helvetica, sans-serif;
+    margin: 5%;
 }
 
-#hebergements
+nav
+{
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+nav, nav ul
+{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li a:link
+{
+    text-decoration: none;
+    color: #000000 ;
+    padding-top: 30px;
+}
+
+
+@media(min-width:769px)
+{
+    nav li a:hover
+        {
+            border-top: 3px solid #0065FC;
+        }
+    nav ul li
+        {
+            margin-left: 5%;
+        }        
+}
+
+
+@media(max-width:768px)
+{
+    nav li a:link
+    {
+        text-decoration: none;
+        color: #000000 ;
+        border-bottom: 3px solid #F2F2F2;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    nav li a:hover
+        {
+            border-bottom: 3px solid #0065FC;
+        }
+}
+
+
+@media(min-width: 1199px)
+{
+    #hebergements
+    {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #hebergMarseille
+    {
+        width: 68%;
+    }
+    #populaires
+    {
+        margin-left: 2%;
+        width: 30%;
+    }
+    footer
+    {
+        display: flex;        
+    }
+    .parafooter
+    {
+        margin-right: 20%;
+    }
+}
+
+.parafooter ul
+{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.hotelpop, .hebergement
+{
+    background-color: #ffffff;
+    border: 2px #F2F2F2 solid;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px grey;
+    margin: 5%;
+}
+
+.activite
+{
+    background-color: #ffffff;
+    border: 2px #F2F2F2 solid;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px grey;
+    margin-bottom: 2%;
+}
+
+
+.hotelpop
+{
+    display: flex;
+}
+
+.hotelpop img
+{
+    width: 30%;
+    height: 30%;
+}
+
+#hebergMarseille, #populaires, footer
 {
     background-color:#F2F2F2;
-    border: 1px #F2F2F2 solid;
-    border-radius: 1%;
+    border: 1px #F2F2F2 solid;    
 }
+
+#hebergMarseille, #populaires
+{
+    border-radius: 20px;
+}
+
+
+@media (max-width: 768px)
+{
+    #hebergMarseille
+    {
+        background-color: #ffffff;
+    }
+
+}
+
 
 
 
