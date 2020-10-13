@@ -16,6 +16,126 @@ nav
     margin-right: 5%;
 }
 
+form
+{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#searchIcon
+{
+    background-color: #F2F2F2;
+    border: 2px #F2F2F2 solid;
+    border-radius: 15px 0 0 15px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input
+{
+    border-top: 1px solid #F2F2F2;
+    border-right: 0px;
+    border-bottom: 1px solid #F2F2F2;
+    border-left: 0px;
+}
+
+#searchButton 
+{
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #0065FC;
+    text-align: center;
+}
+
+#searchButton span
+{
+    color: white; 
+    font-weight: bold;   
+}
+
+#filters h2, #filters button
+{
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+#filters button
+{
+    font-family: Raleway;
+    font-size: 1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 3px #F2F2F2 solid;
+    border-left: 0px;   
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 0% 0% 0% 0%;
+    max-height: 53px;
+}
+
+
+#filters a
+{
+    margin-right: 2%;
+}
+
+#filters button i
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    color: #0065FC;
+    border: 3px  #DEEBFF solid ;
+    border-radius: 50%;
+    min-height: 45px;
+    min-width: 45px;
+    float: left;
+}
+
+#filters a
+{
+    text-decoration: none;
+}
+
+/*button span 
+{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}    
+button span:after 
+{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+button:hover 
+{
+    background-color: #f7c2f9;
+}
+button:hover span 
+{
+    padding-right: 25px;
+}
+button:hover span:after 
+{
+    opacity: 1;
+    right: 0;
+}*/
+
+
+
 nav, nav ul
 {
     display: flex;
@@ -32,6 +152,19 @@ nav li a:link
 
 @media(min-width:769px)
 {
+    body
+        {
+            margin: 5% 10% 5% 10%;
+        }
+    #filters button:hover
+        {
+            /*background-color: #DEEBFF;*/
+            box-shadow: 1px 1px 10px grey;       
+        }
+    .container
+        {
+            display: flex;
+        }
     nav li a:hover
         {
             border-top: 3px solid #0065FC;
@@ -39,7 +172,53 @@ nav li a:link
     nav ul li
         {
             margin-left: 5%;
-        }        
+        }
+    #filters
+    {
+        display: flex;        
+    }   
+    .wrapperActivites 
+        {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        #vieuxPort 
+        {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+        #pompegues { 
+            grid-column: 2;
+            grid-row: 1;
+        }
+        #frioul {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        #notreDame {
+            grid-column: 4;
+            grid-row: 1;
+        }
+        #longchamp {
+            grid-column: 4;
+            grid-row: 2;
+        }
+        #calanques 
+        {
+            grid-column: 3;
+            grid-row: 1 / 3;
+        }
+    .hebergement
+        {
+            width: 30%;
+        }
+    #filters
+    {
+        display: flex;
+        align-items: center;    
+    }        
 }
 
 
@@ -54,11 +233,11 @@ nav li a:link
         padding-left: 5px;
     }
     nav li a:hover
-        {
-            border-bottom: 3px solid #0065FC;
-        }
+    {
+        border-bottom: 3px solid #0065FC;
+    }
+    
 }
-
 
 @media(min-width: 1199px)
 {
@@ -98,8 +277,36 @@ nav li a:link
     background-color: #ffffff;
     border: 2px #F2F2F2 solid;
     border-radius: 20px;
-    box-shadow: 0px 2px 20px grey;
+    /*box-shadow: 0px 2px 20px grey;*/
+    box-shadow: 0px 1px 10px grey;
     margin: 5%;
+    /*padding: 0;*/
+}
+
+.hebergement
+{
+    padding: 0.2%;
+}
+
+.hebergement img
+{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+}
+
+.description i, .hebergement i
+{
+    color: #0065FC;
+}
+#greyStar
+{
+    color: #F2F2F2;
+}
+
+.hotelpop:hover, .hebergement:hover, .activite:hover
+{
+    box-shadow: 0px 2px 20px grey;
 }
 
 .activite
@@ -107,20 +314,29 @@ nav li a:link
     background-color: #ffffff;
     border: 2px #F2F2F2 solid;
     border-radius: 20px;
-    box-shadow: 0px 2px 20px grey;
+    box-shadow: 0px 1px 10px grey;
     margin-bottom: 2%;
+    padding: 0%;
+}
+
+.activite img
+{
+    border-radius: 20px 20px 0 0;
 }
 
 
 .hotelpop
 {
     display: flex;
+    padding: 1%;
 }
 
 .hotelpop img
 {
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 50%;
+    margin-right: 2%;
+    border-radius: 20px 0 0 20px;
 }
 
 #hebergMarseille, #populaires, footer
