@@ -4,11 +4,16 @@
     src: url('fonts/Raleway-VariableFont_wght.ttf');
 }
 
+
 body
 {
     font-family:'Raleway', Arial, Helvetica, sans-serif;
     margin: 5%;
 }
+
+
+/*----------------------- NAVIGATEUR -------------------------- */
+
 
 nav
 {
@@ -57,13 +62,18 @@ input
     font-weight: bold;   
 }
 
-#filters h2, #filters button
+#filters
+{
+    margin-top: 2%;
+}
+
+#filters h2
 {
     margin-right: 1%;
     margin-top: 1%;
 }
 
-#filters button
+.filterButton
 {
     font-family: Raleway;
     font-size: 1em;
@@ -75,17 +85,28 @@ input
     border-left: 0px;   
     border-radius: 30px;
     font-weight: bold;
-    padding: 0% 0% 0% 0%;
+    /* padding: 0% 0% 0% 0%; */
+    padding-right: 10%;
     max-height: 53px;
+    width: auto;
+    margin-right: 20px;
 }
 
+@media (min-width: 769px)
+{
+    .filterButton
+    {
+        width: 100%;
+    }
+    
+}
 
 #filters a
 {
     margin-right: 2%;
 }
 
-#filters button i
+.filterButton i
 {
     display: flex;
     justify-content: center;
@@ -97,44 +118,14 @@ input
     min-height: 45px;
     min-width: 45px;
     float: left;
+    margin-right: 10%;
 }
 
 #filters a
 {
+    color: #000000;
     text-decoration: none;
 }
-
-/*button span 
-{
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}    
-button span:after 
-{
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-button:hover 
-{
-    background-color: #f7c2f9;
-}
-button:hover span 
-{
-    padding-right: 25px;
-}
-button:hover span:after 
-{
-    opacity: 1;
-    right: 0;
-}*/
-
-
 
 nav, nav ul
 {
@@ -149,22 +140,19 @@ nav li a:link
     padding-top: 30px;
 }
 
+#infoIcon
+{
+    color: #0065FC;
+}
 
 @media(min-width:769px)
 {
-    body
-        {
-            margin: 5% 10% 5% 10%;
-        }
-    #filters button:hover
-        {
-            /*background-color: #DEEBFF;*/
-            box-shadow: 1px 1px 10px grey;       
-        }
-    .container
-        {
-            display: flex;
-        }
+    .filterButton:hover
+    {
+        /*background-color: #DEEBFF;*/
+        box-shadow: 1px 1px 10px grey;       
+    }
+
     nav li a:hover
         {
             border-top: 3px solid #0065FC;
@@ -173,54 +161,13 @@ nav li a:link
         {
             margin-left: 5%;
         }
-    #filters
-    {
-        display: flex;        
-    }   
-    .wrapperActivites 
-        {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-            grid-auto-rows: minmax(100px, auto);
-        }
-        #vieuxPort 
-        {
-            grid-column: 1;
-            grid-row: 1 / 3;
-        }
-        #pompegues { 
-            grid-column: 2;
-            grid-row: 1;
-        }
-        #frioul {
-            grid-column: 2;
-            grid-row: 2;
-        }
-        #notreDame {
-            grid-column: 4;
-            grid-row: 1;
-        }
-        #longchamp {
-            grid-column: 4;
-            grid-row: 2;
-        }
-        #calanques 
-        {
-            grid-column: 3;
-            grid-row: 1 / 3;
-        }
-    .hebergement
-        {
-            width: 30%;
-        }
+
     #filters
     {
         display: flex;
         align-items: center;    
-    }        
+    }  
 }
-
 
 @media(max-width:768px)
 {
@@ -239,22 +186,29 @@ nav li a:link
     
 }
 
-@media(min-width: 1199px)
+/*----------------------- SPECIFIQUE DESKTOP -------------------------- */
+@media(min-width:769px)
 {
-    #hebergements
+body
     {
-        display: flex;
-        flex-direction: row-reverse;
+        margin: 5% 10% 5% 10%;
     }
+}
+    
+/*----------------------- BREAKPOINT -------------------------- */
+
+/*@media (max-width: 768px)
+{
     #hebergMarseille
     {
-        width: 68%;
+        background-color: #ffffff;
     }
-    #populaires
-    {
-        margin-left: 2%;
-        width: 30%;
-    }
+}  */ 
+   
+
+/*----------------------- BREAKPOINT -------------------------- */
+@media(min-width: 1199px)
+{
     footer
     {
         display: flex;        
@@ -265,40 +219,13 @@ nav li a:link
     }
 }
 
-.parafooter ul
+/*----------------------- HOTELS POPULAIRES -------------------------- */
+
+#popuIcon
 {
-    list-style-type: none;
-    margin:0;
-    padding:0;
+    float: right;
 }
 
-.hotelpop, .hebergement
-{
-    background-color: #ffffff;
-    border: 2px #F2F2F2 solid;
-    border-radius: 20px;
-    /*box-shadow: 0px 2px 20px grey;*/
-    box-shadow: 0px 1px 10px grey;
-    margin: 5%;
-    /*padding: 0;*/
-}
-
-.hebergement
-{
-    padding: 0.2%;
-}
-
-.hebergement img
-{
-    width: 100%;
-    height:40%;
-    border-radius: 20px 20px 0 0;
-}
-
-.description i, .hebergement i
-{
-    color: #0065FC;
-}
 #greyStar
 {
     color: #F2F2F2;
@@ -309,55 +236,520 @@ nav li a:link
     box-shadow: 0px 2px 20px grey;
 }
 
-.activite
-{
-    background-color: #ffffff;
-    border: 2px #F2F2F2 solid;
-    border-radius: 20px;
-    box-shadow: 0px 1px 10px grey;
-    margin-bottom: 2%;
-    padding: 0%;
-}
-
-.activite img
-{
-    border-radius: 20px 20px 0 0;
-}
-
-
 .hotelpop
 {
     display: flex;
     padding: 1%;
 }
 
-.hotelpop img
+.hotelpop
+{
+    height: 25%;
+}
+
+@media (max-width: 768px)
+{
+    .hotelpop
+    {
+        height: 150px;
+    }
+}
+
+/* .hotelpop img
 {
     width: 50%;
     height: 50%;
     margin-right: 2%;
     border-radius: 20px 0 0 20px;
+} */
+
+#soleilMatinImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/soleilmatin.jpg');
+    width: 45%;
+    background-repeat: no-repeat;
+    border-radius: 20px 0 0 20px;
+    margin-right: 2%;      
 }
 
-#hebergMarseille, #populaires, footer
+#coeurdelEauImg
 {
-    background-color:#F2F2F2;
-    border: 1px #F2F2F2 solid;    
+    background-size: cover;
+    background-image: url('images/2_large/coeurdeleau.jpg');
+    width: 45%;
+    background-repeat: no-repeat;
+    border-radius: 20px 0 0 20px;
+    margin-right: 2%;      
 }
 
-#hebergMarseille, #populaires
+#toutBleuImg
 {
+    background-size: cover;
+    background-image: url('images/2_large/bleublanc.jpg');
+    width: 45%;
+    background-repeat: no-repeat;
+    border-radius: 20px 0 0 20px;
+    margin-right: 2%;      
+}
+
+@media (max-width: 768px00)
+{
+        #soleilMatinImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/soleildumatin.jpg');
+        width: 45%;
+        background-repeat: no-repeat;
+        border-radius: 20px 0 0 20px;
+        margin-right: 2%;      
+    }
+
+    #coeurdelEauImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/coeurdeleau.jpg');
+        width: 45%;
+        background-repeat: no-repeat;
+        border-radius: 20px 0 0 20px;
+        margin-right: 2%;      
+    }
+
+    #toutBleuImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/bleublanc.jpg');
+        width: 45%;
+        background-repeat: no-repeat;
+        border-radius: 20px 0 0 20px;
+        margin-right: 2%;      
+    }    
+}
+
+/*----------------------- HERBERGEMENTS -------------------------- */
+
+.hotelpop, .hebergement
+{
+    background-color: #ffffff;
+    border: 2px #F2F2F2 solid;
     border-radius: 20px;
+    box-shadow: 0px 1px 10px grey;
+    margin: 5%;
+}
+
+.hebergement
+{
+    padding: 0.2%;
+    padding-bottom: 0px;
+    margin: 2%;
 }
 
 
 @media (max-width: 768px)
 {
-    #hebergMarseille
+    .hebergement
     {
-        background-color: #ffffff;
+        height: 300px;
     }
 
+    #hebergMarseille
+    {
+        background-color:#ffffff;
+        /* background-color:#F2F2F2;
+        border: 1px #F2F2F2 solid;     */
+    }
+}
+
+/* .hebergement img
+{
+    width: 100%;
+    height:40%;
+    border-radius: 20px 20px 0 0;
+} */
+
+.description i, .hebergement i
+{
+    color: #0065FC;
+}
+
+
+
+@media (min-width: 769px)
+{
+    #hebergMarseille, #populaires, footer
+    {
+        background-color:#F2F2F2;
+        border: 1px #F2F2F2 solid;
+        margin-bottom: 2%;   
+    }
+}
+
+@media (max-width: 768px)
+{
+    #populaires, footer
+    {
+        background-color: #F2F2F2;
+        border: 1px #F2F2F2 solid; 
+    }
+    #hebergMarseille
+    {
+        margin-bottom: 10%;
+    }
+}
+
+
+@media(min-width:769px)
+{
+    #hebergements
+    {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #hebergMarseille
+    {
+        width: 68%;
+    }
+
+    #populaires
+    {
+        margin-left: 2%;
+        width: 30%;
+    }
+
+    #hebergMarseille, #populaires
+    {
+        border-radius: 20px;
+)    }
+
+    .container
+    {
+        display: flex;
+    }
+
+    .hebergement
+    {
+        width: 100%;
+        height: 300px;
+    } 
+}
+
+#cannebiereImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/cannebiere.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;        
+}
+
+#hotelPortImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/hotelport.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;         
+}
+
+#mouettesImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/hotelmouettes.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;         
+}
+
+#hotelMerImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/hotelmer.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;         
+}
+
+#panierImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/panier.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;         
+}
+
+#aminaImg
+{
+    background-size: cover;
+    background-image: url('images/2_large/amina.jpg');
+    height: 55%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;         
+}
+
+@media(max-width: 768px)
+{
+        #cannebiereImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/cannebiere.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;        
+    }
+
+    #hotelPortImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/hotelport.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;         
+    }
+
+    #mouettesImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/hotelmouettes.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;         
+    }
+
+    #hotelMerImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/hotelmer.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;         
+    }
+
+    #panierImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/panier.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;         
+    }
+
+    #aminaImg
+    {
+        background-size: cover;
+        background-image: url('images/4_small/amina.jpg');
+        height: 55%;
+        background-repeat: no-repeat;
+        border-radius: 20px 20px 0 0;         
+    }
+}
+
+
+
+/*----------------------- ACTIVITES -------------------------- */
+
+#activites
+{
+    margin-bottom: 3%;
+}
+
+.activite
+{
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0.2px 5px grey;
+    width: auto;
+    height: auto;
+}
+
+#vieuxPort, #calanques
+{  
+    height:100%;
+}
+
+
+#pomegues, #frioul, #notreDame, #longchamp
+{  
+    height:300px;
+}
+
+@media (max-width: 768px)
+{
+    .activite
+    {
+        margin-bottom: 5%;
+    }
+
+
+    #vieuxPort, #calanques, #pomegues, #frioul, #notreDame, #longchamp
+    {
+        height: 250px;
+    }
+}
+
+#vieuxPortImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/vieuxport.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#pomeguesImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/pomegues.jpg');
+    height: 80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0; 
+}
+
+#frioulImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/frioul.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0; 
+}
+
+#calanquesImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/calanques.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#notreDameImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/notredame.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#longchampImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/longchamp.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+
+
+
+@media(max-width: 769px)
+{
+    #vieuxPortImg
+{
+    background-size: cover;
+    background-image: url('images/activites/4_small/vieuxport.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#pomeguesImg
+{
+    background-size: cover;
+    background-image: url('images/activites/4_small/pompegues.jpg');
+    height: 80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0; 
+}
+
+#frioulImg
+{
+    background-size: cover;
+    background-image: url('images/activites/4_small/frioul.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0; 
+}
+
+#calanquesImg
+{
+    background-size: cover;
+    background-image: url('images/activites/4_small/calanques.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#notreDameImg
+{
+    background-size: cover;
+    background-image: url('images/activites/4_small/notredame.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+
+#longchampImg
+{
+    background-size: cover;
+    background-image: url('images/activites/2_large/longchamp.jpg');
+    height:80%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;     
+}
+}
+
+@media(min-width:769px)
+{
+    .wrapperActivites 
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    #vieuxPort 
+    {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+    #pompegues { 
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #frioul {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #notreDame {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    #longchamp {
+        grid-column: 4;
+        grid-row: 2;
+    }
+    #calanques 
+    {
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+}
+
+
+
+
+
+/*----------------------- FOOTER -------------------------- */
+
+.parafooter ul
+{
+    list-style-type: none;
+    margin:0;
+    padding:0;
 }
 
 
