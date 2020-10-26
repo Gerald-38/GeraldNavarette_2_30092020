@@ -1,25 +1,114 @@
-@font-face
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+/*@font-face
 {
-    font-family: "Raleway";
+    font-family: "Raleway", "Sans serif";
     src: url('fonts/Raleway-VariableFont_wght.ttf');
-}
+}*/
 
 
 body
 {
-    font-family:'Raleway', Arial, Helvetica, sans-serif;
-    margin: 5%;
+    font-family: "Raleway", "Sans serif";
 }
+
+h1
+{
+    margin-block-end: 0;
+}
+
+p
+{
+    margin-block-start: 0.5em;
+}
+
 
 
 /*----------------------- NAVIGATEUR -------------------------- */
 
+/*header
+{
+    margin: 0;
+    padding-top: 0;
+}*/
 
 nav
 {
     justify-content: space-between;
     margin-right: 5%;
 }
+
+nav, nav ul
+{
+    display: flex;
+    list-style-type: none;
+    /*border: 1px solid black; */
+}
+
+nav a
+{
+    margin-right: 0px;
+    align: right;
+}
+
+nav ul
+{
+    padding-bottom: 0px;
+}
+
+nav ul li
+{
+    /*border: 1px solid black;*/
+}
+
+nav li a:link
+{
+    /*border: 1px solid black;*/
+}
+
+nav li a:link, nav a
+{
+    text-decoration: none;
+    color: #000000 ;
+   /* border: 1px solid black;*/
+}
+
+@media(max-width:768px)
+{
+    nav 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        grid-auto-rows: minmax(10px, auto);
+    }
+
+    #navLinkImg
+    {
+        grid-column: 1;
+        grid-row: 1 / 2;
+    }
+
+    #navLinkHeberg
+    {
+        grid-column: 1;
+        grid-row: 2 / 2 ;
+    }
+
+    #navLinkAct
+    {
+        grid-column: 2;
+        grid-row: 2 / 2;
+    }
+
+    #navLinkInsc
+    {
+        grid-column: 2;
+        grid-row: 1 / 1;
+    }
+
+}
+
 
 form
 {
@@ -48,6 +137,15 @@ input
     border-left: 0px;
 }
 
+input
+{
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1em;
+    padding-left: 1%;
+}
+
+
 #searchButton 
 {
     background-color: #0065FC;
@@ -72,6 +170,7 @@ input
     margin-right: 1%;
     margin-top: 1%;
 }
+
 
 .filterButton
 {
@@ -127,18 +226,6 @@ input
     text-decoration: none;
 }
 
-nav, nav ul
-{
-    display: flex;
-    list-style-type: none;
-}
-
-nav li a:link
-{
-    text-decoration: none;
-    color: #000000 ;
-    padding-top: 30px;
-}
 
 #infoIcon
 {
@@ -153,7 +240,7 @@ nav li a:link
         box-shadow: 1px 1px 10px grey;       
     }
 
-    nav li a:hover
+    nav a:hover
         {
             border-top: 3px solid #0065FC;
         }
@@ -179,7 +266,7 @@ nav li a:link
         padding-right: 5px;
         padding-left: 5px;
     }
-    nav li a:hover
+    nav a:hover
     {
         border-bottom: 3px solid #0065FC;
     }
@@ -191,7 +278,7 @@ nav li a:link
 {
 body
     {
-        margin: 5% 10% 5% 10%;
+        margin: 2% 10% 2% 10%;
     }
 }
     
@@ -234,6 +321,7 @@ body
 .hotelpop:hover, .hebergement:hover, .activite:hover
 {
     box-shadow: 0px 2px 20px grey;
+    cursor: pointer;
 }
 
 .hotelpop
@@ -267,7 +355,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/soleilmatin.jpg');
-    width: 45%;
+    background-position: center;
+    width: 150px;
     background-repeat: no-repeat;
     border-radius: 20px 0 0 20px;
     margin-right: 2%;      
@@ -277,7 +366,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/coeurdeleau.jpg');
-    width: 45%;
+    background-position: center;
+    width: 150px;
     background-repeat: no-repeat;
     border-radius: 20px 0 0 20px;
     margin-right: 2%;      
@@ -287,13 +377,14 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/bleublanc.jpg');
-    width: 45%;
+    background-position: center;
+    width: 150px;
     background-repeat: no-repeat;
     border-radius: 20px 0 0 20px;
     margin-right: 2%;      
 }
 
-@media (max-width: 768px00)
+/*@media (max-width: 768px)
 {
         #soleilMatinImg
     {
@@ -324,9 +415,20 @@ body
         border-radius: 20px 0 0 20px;
         margin-right: 2%;      
     }    
-}
+}*/
 
 /*----------------------- HERBERGEMENTS -------------------------- */
+
+.hebergement h3, .hebergement p
+{
+    margin: 3% 0 3% 0;
+    padding: 0;
+}
+
+.hebergementDesc
+{
+    margin-left: 3%;
+}
 
 .hotelpop, .hebergement
 {
@@ -349,7 +451,8 @@ body
 {
     .hebergement
     {
-        height: 300px;
+        height: 250px;
+        margin-bottom: 5%;
     }
 
     #hebergMarseille
@@ -380,7 +483,8 @@ body
     {
         background-color:#F2F2F2;
         border: 1px #F2F2F2 solid;
-        margin-bottom: 2%;   
+        margin-bottom: 2%;
+        padding: 1%;  
     }
 }
 
@@ -430,7 +534,7 @@ body
     .hebergement
     {
         width: 100%;
-        height: 300px;
+        height: 225px;
     } 
 }
 
@@ -438,7 +542,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/cannebiere.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;        
 }
@@ -447,7 +552,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/hotelport.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;         
 }
@@ -456,7 +562,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/hotelmouettes.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;         
 }
@@ -465,7 +572,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/hotelmer.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;         
 }
@@ -474,7 +582,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/panier.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;         
 }
@@ -483,7 +592,8 @@ body
 {
     background-size: cover;
     background-image: url('images/2_large/amina.jpg');
-    height: 55%;
+    background-position: center;
+    height: 60%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;         
 }
@@ -563,15 +673,29 @@ body
     height: auto;
 }
 
+.activite h3
+{
+    margin-left: 1em;
+}
+
 #vieuxPort, #calanques
 {  
     height:100%;
 }
 
-
-#pomegues, #frioul, #notreDame, #longchamp
+#notreDame, #longchamp
 {  
-    height:300px;
+    height:250px;
+}
+
+#pomegues
+{  
+    height: 250px;
+}
+
+#frioul
+{  
+    height: 250px;
 }
 
 @media (max-width: 768px)
@@ -592,7 +716,8 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/vieuxport.jpg');
-    height:80%;
+    background-position: center;
+    height:90%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;     
 }
@@ -601,6 +726,7 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/pomegues.jpg');
+    background-position: center;
     height: 80%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0; 
@@ -610,6 +736,7 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/frioul.jpg');
+    background-position: center;
     height:80%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0; 
@@ -619,7 +746,8 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/calanques.jpg');
-    height:80%;
+    background-position: center;
+    height:90%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;     
 }
@@ -628,6 +756,7 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/notredame.jpg');
+    background-position: center;
     height:80%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;     
@@ -637,6 +766,7 @@ body
 {
     background-size: cover;
     background-image: url('images/activites/2_large/longchamp.jpg');
+    background-position: center;
     height:80%;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;     
@@ -708,7 +838,7 @@ body
     {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 10px;
+        grid-gap: 40px;
         grid-auto-rows: minmax(100px, auto);
     }
     #vieuxPort 
@@ -750,6 +880,22 @@ body
     list-style-type: none;
     margin:0;
     padding:0;
+}
+
+.parafooter ul a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.parafooter ul li
+{
+    margin-bottom: 1em;
+}
+
+.parafooter ul li:hover
+{
+    text-decoration: underline;
 }
 
 
