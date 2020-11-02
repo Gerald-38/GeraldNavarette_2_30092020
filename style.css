@@ -481,6 +481,11 @@ input
     width: 50%;
 }
 
+.description h3, .description p
+{
+    margin: 2% 0% 2% 0%;
+}
+
 @media (max-width: 768px)
 {
     .hebergement
@@ -526,17 +531,17 @@ input
     }
 }
 
-@media(min-width:769px) and (max-width:1299)
+/* @media(min-width:769px) and (max-width:1299)
 {
         #hotelsPpopulaires
         {
             display: flex;
             flex-direction: row;
         }
-}
+} */
 
 
-@media(min-width:1300px)
+@media(min-width:769px)
 {
 
     #hebergements
