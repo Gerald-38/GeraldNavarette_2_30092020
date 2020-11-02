@@ -481,13 +481,12 @@ input
     width: 50%;
 }
 
-.description h3, .description p
-{
-    margin: 2% 0% 2% 0%;
-}
-
 @media (max-width: 768px)
 {
+    .description h3, .description p
+    {
+        margin: 2% 0% 2% 0%;
+    }
     .hebergement
     {
         height: 250px;
