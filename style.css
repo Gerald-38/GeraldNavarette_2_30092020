@@ -208,7 +208,9 @@ input
 
 #filters a
 {
-    margin-right: 2%;
+    margin-right: 3%;
+    color: #000000;
+    text-decoration: none;
 }
 
 .filterButton i
@@ -224,12 +226,6 @@ input
     min-width: 45px;
     float: left;
     margin-right: 10%;
-}
-
-#filters a
-{
-    color: #000000;
-    text-decoration: none;
 }
 
 
