@@ -1,3 +1,5 @@
+/*----------------------- PROPRIETES GENERALES -------------------------- */
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 
 body
@@ -5,38 +7,29 @@ body
     font-family: "Raleway", "Sans serif";
 } 
 
-h1
+a
 {
-    margin-block-end: 0;
-}
-
-p
-{
-    margin-block-start: 0.5em;
-}
-
-a{
     text-decoration: none;
     color: #000000;
 }
 
 /*********************** TABLETTE *************************/
 
-@media (min-width: 769px) and (max-width: 1400px)
+@media (min-width: 769px) and (max-width: 1500px)
 {
     body
     {
-        margin: 2% 5% 2% 5%;
+        margin: 2% 2% 2% 2%;
     }
 }
 
 /*********************** DESKTOP *************************/
 
-@media(min-width:1401px)
+@media(min-width:1501px)
 {
 body
     {
-        margin: 2% 10% 2% 10%;
+        margin: 2% 5% 2% 5%;
     }
 }  
 
@@ -57,7 +50,12 @@ nav
 #navLinkHeberg, #navLinkAct, #navLinkInsc
 {
     margin: 0 0 0 0;
-    padding: 20px 20px 0px 20px;
+    padding: 35px 20px 0px 20px;
+}
+
+#navLinkInsc
+{
+    color: #0065FC;
 }
 
 
@@ -88,7 +86,6 @@ form
 #searchIcon
 {
     background-color: #F2F2F2;
-    border: 2px #F2F2F2 solid;
     border-radius: 15px 0 0 15px;
     height: 40px;
     width: 40px;
@@ -97,6 +94,7 @@ form
     flex-direction: column;
     justify-content: space-around;
 }
+
 
 input
 {
@@ -118,7 +116,7 @@ input
 {
     background-color: #0065FC;
     border-radius: 0 15px 15px 0;
-    border: 1px solid #0065FC;
+    border: 0px;
     text-align: center;
 }
 
@@ -185,7 +183,6 @@ input
     align-items: center;
     background-color: #DEEBFF;
     color: #0065FC;
-    border: 3px  #DEEBFF solid ;
     border-radius: 50%;
     min-height: 45px;
     min-width: 45px;
@@ -264,6 +261,7 @@ input
     {
         color: #fff;
     }
+    
 
     form input 
     {
@@ -272,23 +270,17 @@ input
 
     #searchIcon
     {
-        background-color: #F2F2F2;
-        border: 2px #F2F2F2 solid;
-        border-radius: 15px 15px 15px 15px;
         height: 40px;
         width: 60px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
         justify-content: space-around;
-    }
-
+        border-radius: 15px 15px 15px 15px;
+    }   
+    
+    
     #searchButton 
     {
-        background-color: #0065FC;
         border-radius: 15px 15px 15px 15px;
-        border: 1px solid #0065FC;
-        /* text-align: center; */
         width: 60px;
     }
 
@@ -375,17 +367,19 @@ input
 
 /*----------------------- HOTELS POPULAIRES -------------------------- */
 
-
-
-
 #popuIcon
 {
     float: right;
 }
 
-#greyStar
+.starIcon [data-active=true]
 {
-    color: #F2F2F2;
+    color: #0065FC;
+}
+
+.starIcon[data-active=false]
+{
+color: #d9d9d9;
 }
 
 .hotelpop:hover, .hebergement:hover, .activite:hover
@@ -438,6 +432,11 @@ input
     margin-right: 2%;      
 }
 
+#populaires
+{
+   background-color:#F2F2F2; 
+}
+
 
 
 /*----------------------- HERBERGEMENTS -------------------------- */
@@ -473,13 +472,20 @@ input
 
 .description
 {
-    width: 90%;
+    width: 50%;
+}
+
+.description h3
+{
+    margin-top: 0%;
 }
 
 .description i, .hebergement i
 {
     color: #0065FC;
 }
+
+
 
 #cannebiereImg
 {
@@ -544,7 +550,7 @@ input
 
 /*********************** SMARTPHONE *************************/
 
-@media(max-width: 768px)
+@media(max-width: 998px)
 {
         #cannebiereImg
     {
@@ -618,7 +624,6 @@ input
     #populaires, footer
     {
         background-color: #F2F2F2;
-        border: 1px #F2F2F2 solid;
         margin-bottom: 10%;
     }
     #hebergMarseille
@@ -631,15 +636,17 @@ input
 /*********************** TABLETTE *************************/
 
 
-@media (min-width: 769px) and (max-width: 1400px)
+@media (min-width: 999px) and (max-width: 1500px)
 {
+    .description
+    {
+        width: 60%;
+    }
 
     #hotelsPopulaires a
     {
-        width: 31%;
-        /* margin-left: 1px; */
-    }
-
+        width: 33%;
+    }    
 
     #hotelsPopulaires
     {        
@@ -654,8 +661,7 @@ input
 
     .hotelpop
     {        
-        /* width: 30%; */
-        height: 200px;
+        height: 180px;
         margin: 1%;
     } 
           
@@ -678,7 +684,7 @@ input
     
 }
 
-@media (min-width: 1400px)
+@media (min-width: 1501px)
 {
     
 
@@ -713,7 +719,7 @@ input
         {
             width: 100%;
             height: 225px;
-        } 
+        }
     
 }
 
@@ -723,11 +729,21 @@ input
 {
     #hebergMarseille, #populaires, footer
     {
-        background-color:#F2F2F2;
-        border: 1px #F2F2F2 solid;
         margin-bottom: 2%;
-        padding: 1%;  
+        padding: 1%; 
     }
+
+    #hebergMarseille
+    {
+       background-color:#F2F2F2; 
+    }
+
+
+    footer
+    {
+       background-color:#F2F2F2; 
+    }
+
 }
 
 
