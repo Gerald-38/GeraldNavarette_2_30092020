@@ -121,12 +121,15 @@ input
     text-align: center;
 }
 
+
+
 #searchButton span
 {
-    color: white; 
+    color: #ffffff; 
     font-weight: bold;
     font-family: Raleway;   
 }
+
 
 #filters
 {
@@ -253,8 +256,15 @@ input
     }
     .search
     {
-        margin: 20% 2% 10% 2%;
+        margin: 20% 2% 5% 2%;
     }
+
+    .search p 
+    {
+        margin: 5% 0% 0% 0%;
+    }
+
+
     #searchButton span
     {
         display: none;
@@ -363,8 +373,9 @@ input
 
     form 
     {
-        margin: 10% 0% 10% 0%;
+        margin: 5% 0% 5% 0%;
     }
+
 }
 
 
@@ -628,7 +639,9 @@ color: #d9d9d9;
     {
         background-color: #F2F2F2;
         margin-bottom: 10%;
+        padding-bottom: 1%;
     }
+    
     #hebergMarseille
     {
         margin-bottom: 10%;
@@ -641,6 +654,8 @@ color: #d9d9d9;
 
 @media (min-width: 1024px) and (max-width: 1366px)
 {
+
+
     .description
     {
         width: 60%;
@@ -733,7 +748,8 @@ color: #d9d9d9;
     #hebergMarseille, #populaires, footer
     {
         margin-bottom: 2%;
-        padding: 1%; 
+        padding: 1%;
+        margin-top: 1%; 
     }
 
     #hebergMarseille
