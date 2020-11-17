@@ -13,9 +13,10 @@ a
     color: #000000;
 }
 
+
 /*********************** TABLETTE *************************/
 
-@media (min-width: 769px) and (max-width: 1500px)
+@media (min-width: 769px) and (max-width: 1366px)
 {
     body
     {
@@ -25,7 +26,7 @@ a
 
 /*********************** DESKTOP *************************/
 
-@media(min-width:1501px)
+@media(min-width:1367px)
 {
 body
     {
@@ -196,12 +197,14 @@ input
     color: #0065FC;
 }
 
+.filterButton:hover
+{
+    box-shadow: 1px 1px 10px grey;       
+}
+
 @media(min-width:769px)
 {
-    .filterButton:hover
-    {
-        box-shadow: 1px 1px 10px grey;       
-    }
+
 
     #navLinkHeberg:hover, #navLinkAct:hover
         {
@@ -550,7 +553,7 @@ color: #d9d9d9;
 
 /*********************** SMARTPHONE *************************/
 
-@media(max-width: 998px)
+@media(max-width: 1024px)
 {
         #cannebiereImg
     {
@@ -636,7 +639,7 @@ color: #d9d9d9;
 /*********************** TABLETTE *************************/
 
 
-@media (min-width: 999px) and (max-width: 1500px)
+@media (min-width: 1024px) and (max-width: 1366px)
 {
     .description
     {
@@ -684,7 +687,7 @@ color: #d9d9d9;
     
 }
 
-@media (min-width: 1501px)
+@media (min-width: 1367px) 
 {
     
 
@@ -989,7 +992,7 @@ color: #d9d9d9;
 
 /*********************** TABLETTE PAYSAGE *************************/
 
-@media (min-width: 1025px) and (max-width: 1400px)
+@media (min-width: 1025px) and (max-width: 1366px)
 {
     .wrapperActivites 
     {
@@ -1026,7 +1029,7 @@ color: #d9d9d9;
 
 }
 
-@media (min-width: 1025px) and (max-width: 1400px)
+@media (min-width: 1025px) and (max-width: 1366px)
 {
     #vieuxPortImg
     {
@@ -1103,7 +1106,7 @@ color: #d9d9d9;
 
 /*********************** DESKTOP *************************/
 
-@media(min-width:1401px)
+@media(min-width: 1367px)
 {
     .wrapperActivites 
     {
