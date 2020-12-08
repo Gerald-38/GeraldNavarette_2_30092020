@@ -10,8 +10,8 @@ Le but du projet est de réaliser prototype d'un site en intégrant la maquette 
 
 Compétences acquises : 
 
-Implémenter une interface responsive
-Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
-Intégrer du contenu conformément à une maquette
-Mettre en place son environnement Front-End
+Implémenter une interface responsive, 
+Utiliser un système de gestion de versions pour le suivi du projet et son hébergement, 
+Intégrer du contenu conformément à une maquette, 
+Mettre en place son environnement Front-End, 
 
